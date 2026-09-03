@@ -11,6 +11,10 @@ export default function Navbar() {
     // Only intercept the click if we are already on the homepage
     if (pathname === "/") {
       e.preventDefault();
+      if (targetId === "solutions") {
+        window.dispatchEvent(new CustomEvent("scroll-to-solutions"));
+        return;
+      }
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -55,20 +59,7 @@ export default function Navbar() {
           onClick={(e) => handleScroll(e, "solutions")}
           className="flex items-center gap-1.5 hover:text-gray-600 transition-colors"
         >
-          Solutions
-          <svg
-            className="w-3 h-3 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
+          Solution
         </Link>
         <Link
           href="/#why-trinetra"

@@ -1,9 +1,10 @@
 import Navbar from "../components/Navbar";
+import OurSolution from "../components/OurSolution";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-teal-100">
       {/* 1. HERO SECTION */}
-      <section id="hero" className="max-w-[1280px] mx-auto px-8 pt-24 pb-32">
+      <section id="hero" className="max-w-[1280px] mx-auto px-8 pt-8 sm:pt-10 lg:pt-12 pb-12 lg:pb-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left Column: Typography & Call to Actions */}
           <div className="w-full lg:w-[55%] space-y-8 z-10">
@@ -49,9 +50,9 @@ export default function HomePage() {
               <div className="absolute z-10 flex items-center justify-center drop-shadow-[0_0_20px_rgba(4,51,45,0.8)]">
                 <svg viewBox="0 0 100 100" className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] text-[#042621]">
                   {/* Horizontal Eye Shape */}
-                  <path 
-                    d="M5 50 C35 25, 65 25, 95 50 C65 75, 35 75, 5 50 Z" 
-                    fill="currentColor" 
+                  <path
+                    d="M5 50 C35 25, 65 25, 95 50 C65 75, 35 75, 5 50 Z"
+                    fill="currentColor"
                   />
                   {/* Outer Iris */}
                   <ellipse cx="50" cy="50" rx="18" ry="14" fill="#18554a" />
@@ -97,30 +98,12 @@ export default function HomePage() {
                 Active Liveness Check
               </div>
             </div>
-            et
           </div>
         </div>
       </section>
 
-      {/* 2. SOLUTIONS SECTION */}
-      <section
-        id="solutions"
-        className="py-24 bg-gray-50 border-t border-gray-100"
-      >
-        <div className="max-w-[1280px] mx-auto px-8">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a1917] mb-6">
-            Our Solutions
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            Explore our suite of AI-powered tools designed to verify identities,
-            detect deepfakes, and ensure compliance seamlessly.
-          </p>
-          {/* Add your solution cards or grid here */}
-          <div className="mt-12 h-64 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-gray-400">
-            [Solutions Grid Placeholder]
-          </div>
-        </div>
-      </section>
+      {/* 2. OUR SOLUTION SECTION */}
+      <OurSolution />
 
       {/* 3. WHY TRINETRA SECTION */}
       <section id="why-trinetra" className="py-24 bg-white">
