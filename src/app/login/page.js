@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LightRays from "@/components/LightRays";
 
 export default function LoginPage() {
   const [userId, setUserId] = useState("");
@@ -27,8 +28,27 @@ export default function LoginPage() {
       
       {/* Left Column: Trinetra Brand & Eye Graphic */}
       <div className="hidden md:flex md:w-1/2 h-full bg-[#042621] relative flex-col items-center justify-center p-12 border-r border-[#133833] overflow-hidden">
-        <div className="absolute inset-0 bg-[#36b37e]/5 blur-[80px] rounded-full w-full h-full"></div>
+        {/* LightRays Interactive WebGL Background */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#ffffff"
+            raysSpeed={1}
+            lightSpread={1}
+            rayLength={2}
+            pulsating={false}
+            fadeDistance={1}
+            saturation={1}
+            followMouse
+            mouseInfluence={0.1}
+            noiseAmount={0}
+            distortion={0}
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-[#36b37e]/5 blur-[80px] rounded-full w-full h-full pointer-events-none z-[1]"></div>
         
+        {/* Eye Symbol & Brand (Intact on top) */}
         <div className="relative z-10 flex flex-col items-center justify-center drop-shadow-[0_0_20px_rgba(54,179,126,0.3)]">
           <svg viewBox="0 0 100 100" className="w-[180px] h-[180px] text-[#021411]">
             <path d="M5 50 C35 25, 65 25, 95 50 C65 75, 35 75, 5 50 Z" fill="currentColor" />

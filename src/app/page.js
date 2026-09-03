@@ -125,28 +125,107 @@ export default function HomePage() {
       {/* 3. WHY TRINETRA SECTION */}
       <section id="why-trinetra" className="py-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-8">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a1917] mb-6">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a1917] mb-3 tracking-tight">
             Why Trinetra?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl">
-            See how our advanced deep learning models stay one step ahead of
-            sophisticated fraud attempts and synthetic identity creation.
+            Smarter protection against modern fraud.
           </p>
-          {/* Add your awareness video or features here */}
-          <div className="mt-12 aspect-video bg-gray-100 rounded-2xl flex items-center justify-center relative overflow-hidden group cursor-pointer border border-gray-200 shadow-sm">
-            <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-              <svg
-                className="w-8 h-8 text-[#04332d] ml-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
+
+          {/* 3 Feature Cards */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1: AI-Powered Detection */}
+            <article className="group relative bg-white border border-[#e2e8e6] p-8 rounded-none flex flex-col justify-start h-full transform transition-all duration-250 ease-out hover:-translate-y-1 hover:border-[#0b5f54] hover:shadow-md motion-reduce:hover:translate-y-0 motion-reduce:transition-none">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#0b5f54] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <div className="w-12 h-12 flex items-center justify-center bg-[#f0f7f5] border border-[#dcebe6] mb-6 rounded-none">
+                <svg
+                  className="w-6 h-6 text-[#0b5f54] transform transition-transform duration-250 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="5" r="2.5" />
+                  <circle cx="5" cy="18" r="2.5" />
+                  <circle cx="19" cy="18" r="2.5" />
+                  <circle cx="12" cy="13" r="2" />
+                  <line x1="12" y1="7.5" x2="12" y2="11" />
+                  <line x1="10.5" y1="14.5" x2="6.8" y2="16.5" />
+                  <line x1="13.5" y1="14.5" x2="17.2" y2="16.5" />
+                  <line x1="6.8" y1="16.2" x2="10.5" y2="6.8" />
+                  <line x1="17.2" y1="16.2" x2="13.5" y2="6.8" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[#0a1917] tracking-tight mb-3">
+                AI-Powered Detection
+              </h3>
+              <p className="text-[15px] leading-relaxed text-gray-600 font-normal">
+                Trinetra uses intelligent AI models to analyze identity, behavioral, and transaction signals, helping detect suspicious patterns that traditional rule-based systems may miss.
+              </p>
+            </article>
+
+            {/* Card 2: Real-Time Protection */}
+            <article className="group relative bg-white border border-[#e2e8e6] p-8 rounded-none flex flex-col justify-start h-full transform transition-all duration-250 ease-out hover:-translate-y-1 hover:border-[#0b5f54] hover:shadow-md motion-reduce:hover:translate-y-0 motion-reduce:transition-none">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#0b5f54] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <div className="w-12 h-12 flex items-center justify-center bg-[#f0f7f5] border border-[#dcebe6] mb-6 rounded-none">
+                <svg
+                  className="w-6 h-6 text-[#0b5f54] transform transition-transform duration-250 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M13 2 3 14h8l-1 8 11-12h-8l1-8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[#0a1917] tracking-tight mb-3">
+                Real-Time Protection
+              </h3>
+              <p className="text-[15px] leading-relaxed text-gray-600 font-normal">
+                Monitor suspicious activity in real time and identify potential fraud early, enabling faster decisions and reducing the impact of fraudulent activity.
+              </p>
+            </article>
+
+            {/* Card 3: Multi-Layer Security */}
+            <article className="group relative bg-white border border-[#e2e8e6] p-8 rounded-none flex flex-col justify-start h-full transform transition-all duration-250 ease-out hover:-translate-y-1 hover:border-[#0b5f54] hover:shadow-md motion-reduce:hover:translate-y-0 motion-reduce:transition-none">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#0b5f54] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <div className="w-12 h-12 flex items-center justify-center bg-[#f0f7f5] border border-[#dcebe6] mb-6 rounded-none">
+                <svg
+                  className="w-6 h-6 text-[#0b5f54] transform transition-transform duration-250 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2 4 5v6.5c0 5 3.4 9.7 8 10.5 4.6-.8 8-5.5 8-10.5V5l-8-3z" />
+                  <path d="M12 6.5 7 8.5v3.2c0 3.2 2.1 6.2 5 6.8 2.9-.6 5-3.6 5-6.8V8.5l-5-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[#0a1917] tracking-tight mb-3">
+                Multi-Layer Security
+              </h3>
+              <p className="text-[15px] leading-relaxed text-gray-600 font-normal">
+                Trinetra combines multiple verification and risk signals to create a stronger defense against sophisticated identity fraud and evolving attack techniques.
+              </p>
+            </article>
           </div>
         </div>
       </section>
