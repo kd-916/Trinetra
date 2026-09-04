@@ -214,16 +214,116 @@ export default function HomePage() {
       </section>
 
       {/* 4. ABOUT US SECTION */}
-      <section id="about-us" className="py-24 bg-[#04332d] text-white">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <h2 className="text-3xl lg:text-4xl font-semibold mb-6">About Us</h2>
-          <p className="text-lg text-teal-100 max-w-2xl">
-            We are a team of AI researchers, security engineers, and identity
-            experts dedicated to building a safer, fraud-free digital ecosystem.
-          </p>
-          {/* Add team or mission details here */}
-          <div className="mt-12 h-64 border-2 border-dashed border-teal-700/50 rounded-xl flex items-center justify-center text-teal-600">
-            [Team/Mission Placeholder]
+      <section id="about-us" className="relative py-16 lg:py-20 bg-[#04332d] text-white overflow-hidden">
+        {/* Subtle Trinetra Eye/Iris Geometry Background */}
+        <div
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 lg:translate-x-12 pointer-events-none opacity-[0.06] select-none"
+          aria-hidden="true"
+        >
+          <svg
+            width="540"
+            height="540"
+            viewBox="0 0 400 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-[#36b37e]"
+          >
+            {/* Concentric rings */}
+            <circle cx="200" cy="200" r="190" stroke="currentColor" strokeWidth="1" strokeDasharray="4 6" />
+            <circle cx="200" cy="200" r="150" stroke="currentColor" strokeWidth="1" />
+            <circle cx="200" cy="200" r="110" stroke="currentColor" strokeWidth="1" strokeDasharray="2 4" />
+            <circle cx="200" cy="200" r="75" stroke="currentColor" strokeWidth="1.2" />
+            <circle cx="200" cy="200" r="35" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="200" cy="200" r="10" fill="currentColor" opacity="0.5" />
+            {/* Geometric eye almond outline */}
+            <path
+              d="M30 200 C90 120, 310 120, 370 200 C310 280, 90 280, 30 200 Z"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <path
+              d="M70 200 C120 145, 280 145, 330 200 C280 255, 120 255, 70 200 Z"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeDasharray="3 3"
+              fill="none"
+            />
+            {/* Calibration crosshairs */}
+            <line x1="200" y1="10" x2="200" y2="390" stroke="currentColor" strokeWidth="0.75" strokeDasharray="4 8" opacity="0.6" />
+            <line x1="10" y1="200" x2="390" y2="200" stroke="currentColor" strokeWidth="0.75" strokeDasharray="4 8" opacity="0.6" />
+          </svg>
+        </div>
+
+        <div className="relative max-w-[1280px] mx-auto px-8 z-10">
+          {/* Header */}
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2 text-[#36b37e] font-semibold text-xs tracking-widest uppercase mb-3">
+              <span className="w-1.5 h-1.5 rounded-none bg-[#36b37e]" aria-hidden="true" />
+              ABOUT TRINETRA
+            </div>
+
+            <h2 className="text-3xl lg:text-4xl font-semibold text-white tracking-tight mb-4">
+              See beyond. Detect smarter. Protect better.
+            </h2>
+
+            <p className="text-base md:text-lg text-teal-100/80 leading-relaxed font-normal">
+              Trinetra is an AI-powered fraud detection platform built to identify suspicious identities, behavioral patterns, and potential threats in an increasingly digital world. By combining intelligent analysis with multi-layer verification, Trinetra helps organizations detect fraud earlier and make more informed security decisions.
+            </p>
+          </div>
+
+          {/* Three Feature Blocks Grid */}
+          <div className="mt-12 lg:mt-14 border-y border-white/10 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            {/* Feature 01 */}
+            <div className="group relative p-8 lg:p-10 bg-transparent hover:bg-white/[0.025] transition-all duration-250 ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 motion-reduce:transition-none cursor-default">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#36b37e] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <span className="block text-xs md:text-sm font-mono tracking-widest text-[#36b37e]/70 group-hover:text-[#36b37e] transition-colors duration-250 mb-4">
+                01
+              </span>
+              <h3 className="text-xl lg:text-2xl font-semibold text-white tracking-tight mb-3">
+                Detect
+              </h3>
+              <p className="text-sm md:text-[15px] leading-relaxed text-teal-100/75 group-hover:text-teal-100/90 transition-colors duration-250 font-normal">
+                Identify suspicious identities, transactions, and behavioral patterns before they become serious threats.
+              </p>
+            </div>
+
+            {/* Feature 02 */}
+            <div className="group relative p-8 lg:p-10 bg-transparent hover:bg-white/[0.025] transition-all duration-250 ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 motion-reduce:transition-none cursor-default">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#36b37e] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <span className="block text-xs md:text-sm font-mono tracking-widest text-[#36b37e]/70 group-hover:text-[#36b37e] transition-colors duration-250 mb-4">
+                02
+              </span>
+              <h3 className="text-xl lg:text-2xl font-semibold text-white tracking-tight mb-3">
+                Understand
+              </h3>
+              <p className="text-sm md:text-[15px] leading-relaxed text-teal-100/75 group-hover:text-teal-100/90 transition-colors duration-250 font-normal">
+                Transform complex identity and behavioral signals into meaningful risk insights for smarter security decisions.
+              </p>
+            </div>
+
+            {/* Feature 03 */}
+            <div className="group relative p-8 lg:p-10 bg-transparent hover:bg-white/[0.025] transition-all duration-250 ease-out hover:-translate-y-1 motion-reduce:hover:translate-y-0 motion-reduce:transition-none cursor-default">
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-[#36b37e] transition-colors duration-250"
+                aria-hidden="true"
+              />
+              <span className="block text-xs md:text-sm font-mono tracking-widest text-[#36b37e]/70 group-hover:text-[#36b37e] transition-colors duration-250 mb-4">
+                03
+              </span>
+              <h3 className="text-xl lg:text-2xl font-semibold text-white tracking-tight mb-3">
+                Protect
+              </h3>
+              <p className="text-sm md:text-[15px] leading-relaxed text-teal-100/75 group-hover:text-teal-100/90 transition-colors duration-250 font-normal">
+                Build stronger digital trust through intelligent verification and multi-layer protection against evolving fraud.
+              </p>
+            </div>
           </div>
         </div>
       </section>
